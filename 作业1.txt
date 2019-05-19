@@ -1,0 +1,22 @@
+
+作业：
+ 命名空间
+
+    例子：修改下面程序，把变量Value放到某个命名空间下，在main函数中访问变量Value,不允许直接访问
+    要求：Value放到独立的CPP文件中
+    
+    //Module.h
+    extern int Value;
+
+    //Module.c
+   int Value = 1;
+    
+    //main.c
+    #include <iostream>
+    #include "Module.h"
+    using namespace std;
+    int main(int argc, char *argv[])
+    {
+      cout<<Value<<endl;
+      return 0;
+    }  
